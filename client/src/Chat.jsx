@@ -185,7 +185,7 @@ const Chat = () => {
   //when connection closes then again connect to ws by calling this fucntion again
   //hence connection persists even after the refresh
   const connectToWs = () => {
-    const ws = new WebSocket("ws://localhost:4000");
+    const ws = new WebSocket("wss://mern-chat-qxu7.onrender.com/");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () =>
