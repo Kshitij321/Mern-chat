@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieparser()); // to parse the cookies coming from request to js objects
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://mern-chat-qxu7.onrender.com/",
     credentials: true,
   })
 );

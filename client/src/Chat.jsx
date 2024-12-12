@@ -45,7 +45,7 @@ const Chat = () => {
   useEffect(() => {
     if (selectedUserId)
       axios
-        .get(`http://localhost:4000/messages/${selectedUserId}`, {
+        .get(`https://mern-chat-qxu7.onrender.com/messages/${selectedUserId}`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -55,7 +55,7 @@ const Chat = () => {
 
   const handleLogout = () => {
     axios
-      .post("http://localhost:4000/logout", { withCredentials: true })
+      .post("https://mern-chat-qxu7.onrender.com/logout", { withCredentials: true })
       .then(() => {
         setWs(null);
         setId(null);
@@ -140,7 +140,7 @@ const Chat = () => {
       // Introduce a timeout to wait for the response
       setTimeout(() => {
         axios
-          .get(`http://localhost:4000/messages/${selectedUserId}`, {
+          .get(`https://mern-chat-qxu7.onrender.com/messages/${selectedUserId}`, {
             withCredentials: true,
           })
           .then((res) => {
@@ -163,7 +163,7 @@ const Chat = () => {
   //.on on server side
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/people`, { withCredentials: true })
+      .get(`https://mern-chat-qxu7.onrender.com/people`, { withCredentials: true })
       .then((res) => {
         const offlinepeopleArr = res.data
           .filter((p) => p._id !== id) // removing our id from all people
@@ -291,7 +291,7 @@ const Chat = () => {
                         <div className="">
                           <a
                             className="underline flex items-center gap-1"
-                            href={`http://localhost:4000/uploads/${msg.file}`}
+                            href={`https://mern-chat-qxu7.onrender.com/uploads/${msg.file}`}
                             target="_blank"
                           >
                             <svg

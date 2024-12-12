@@ -15,7 +15,7 @@ const RegisterAndLogin = () => {
     try {
       //see in axios syntax we can directly send the data with the post call
       const { data } = await axios.post(
-        `http://localhost:4000/${url}`,
+        `https://mern-chat-qxu7.onrender.com/${url}`,
         { username, password },
         {
           withCredentials: true,

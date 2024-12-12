@@ -10,7 +10,7 @@ const UserContextProvider = ({ children }) => {
   const [username, setUsername] = useState(null);
   const [id, setId] = useState(null);
   useEffect(()=>{
-    axios.get('http://localhost:4000/profile',{withCredentials:true}).then((res)=>{
+    axios.get('https://mern-chat-qxu7.onrender.com/profile',{withCredentials:true}).then((res)=>{
          setId(res.data.id);
          setUsername(res.data.username);
     })
