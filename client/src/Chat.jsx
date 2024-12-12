@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import Avatar from "./Avatar";
 import Logo from "./Logo";
 import { UserContext } from "./UserContext";
-import { uniqBy } from "lodash";
+import uniqBy from "lodash/uniqBy";
+
 
 import { useRef } from "react";
 import axios from "axios";
